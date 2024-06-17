@@ -40,7 +40,7 @@ import { ref } from 'vue';
         </select>
       </label>
       <div class="weather-card">
-        <div>{{ weatherInfo.temperature }}ºC {{ weatherInfo.city }} Solecito</div>
+        <div>{{ weatherInfo.temperature }}ºC {{ weatherInfo.city }} Sol</div>
         <span>Cielo {{ weatherInfo.stateSky }}</span>
       </div>
     </div>
@@ -63,6 +63,7 @@ import { ref } from 'vue';
       padding: 16px;
       gap: 4px;
       background-color: rgb(0,191,255);
+      
     }
   }
   </style>
