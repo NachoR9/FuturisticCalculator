@@ -1,6 +1,11 @@
 <template>
   <div class="calculator">
-    <div class="display">{{ display }}</div>
+    <div class="display">
+      {{ display }}
+    </div>
+    <div class="colFunction">
+      <button @click="clear" class="btn-function col-12">CE</button>
+    </div>
     <div class="buttons">
       <button @click="append('1')" class="btn-number">1</button>
       <button @click="append('2')" class="btn-number">2</button>
@@ -133,7 +138,7 @@ button:active {
 }
 
 .btn-function {
-  background-color: #ff9500;
+  background-color: #00000077;
   color: white;
 }
 
