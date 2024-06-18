@@ -2,23 +2,23 @@
   <div class="calculator">
     <div class="display">{{ display }}</div>
     <div class="buttons">
-      <button @click="clear" class="btn-function">CE</button>
-      <button @click="append('.')" class="btn-number">.</button>
-      <button @click="calculate" class="btn-equal">=</button>
-      <button @click="append('7')" class="btn-number">7</button>
-      <button @click="append('8')" class="btn-number">8</button>
-      <button @click="append('9')" class="btn-number">9</button>
-      <button @click="append('+')" class="btn-operator">+</button>
-      <button @click="append('4')" class="btn-number">4</button>
-      <button @click="append('5')" class="btn-number">5</button>
-      <button @click="append('6')" class="btn-number">6</button>
-      <button @click="append('-')" class="btn-operator">-</button>
       <button @click="append('1')" class="btn-number">1</button>
       <button @click="append('2')" class="btn-number">2</button>
       <button @click="append('3')" class="btn-number">3</button>
-      <button @click="append('*')" class="btn-operator">*</button>
+      <button @click="append('4')" class="btn-number">4</button>
+      <button @click="append('5')" class="btn-number">5</button>
+      <button @click="append('6')" class="btn-number">6</button>
+      <button @click="append('7')" class="btn-number">7</button>
+      <button @click="append('8')" class="btn-number">8</button>
+      <button @click="append('9')" class="btn-number">9</button>
       <button @click="append('0')" class="btn-number">0</button>
+      <button @click="append('.')" class="btn-number">.</button>
+      <button @click="append('*')" class="btn-operator">*</button>
+      <button @click="append('+')" class="btn-operator">+</button>
       <button @click="append('/')" class="btn-operator">/</button>
+      <button @click="append('-')" class="btn-operator">-</button>
+      <button @click="calculate" class="btn-equal">=</button>
+
       <button @click="setBaseCurrency('USD')" class="btn-currency">USD</button>
       <button @click="setBaseCurrency('EUR')" class="btn-currency">EUR</button>
       <button @click="setBaseCurrency('JPY')" class="btn-currency">JPY</button>
@@ -97,7 +97,8 @@ body {
 
 .calculator {
   width: 100%;
-  max-width: 320px;
+  position: relative;
+  max-width: 420px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -109,7 +110,7 @@ body {
   background: #222;
   color: #fff;
   font-size: 2em;
-  padding: 20px;
+  padding: 40px;
   text-align: right;
 }
 
