@@ -1,3 +1,47 @@
+<script setup>
+import { ref } from "vue";
+
+const display = ref("");
+const baseCurrency = ref("USD");
+const targetCurrency = ref("");
+
+const append = (character) => {
+  display.value += character;
+};
+
+const clear = () => {
+  display.value = "";
+  baseCurrency.value = "USD";
+  targetCurrency.value = "";
+};
+
+const calculate = () => {
+  try {
+    display.value = eval(display.value).toString();
+  } catch (e) {
+    display.value = "Error";
+  }
+};
+
+const setBaseCurrency = (currency) => {
+  baseCurrency.value = currency;
+};
+
+const convertCurrency = async (currency) => {
+  targetCurrency.value = currency;
+  try {
+    const response = await fetch(
+      `https://api.exchangerate-api.com/v4/latest/${baseCurrency.value}`
+    );
+    const data = await response.json();
+    const rate = data.rates[targetCurrency.value];
+    display.value = (parseFloat(display.value) * rate).toFixed(2);
+  } catch (e) {
+    display.value = "Error";
+  }
+};
+</script>
+
 <template>
   <div class="calculator">
     <div class="display">
@@ -44,62 +88,7 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
-
-const display = ref("");
-const baseCurrency = ref("USD");
-const targetCurrency = ref("");
-
-const append = (character) => {
-  display.value += character;
-};
-
-const clear = () => {
-  display.value = "";
-  baseCurrency.value = "USD";
-  targetCurrency.value = "";
-};
-
-const calculate = () => {
-  try {
-    display.value = eval(display.value).toString();
-  } catch (e) {
-    display.value = "Error";
-  }
-};
-
-const setBaseCurrency = (currency) => {
-  baseCurrency.value = currency;
-};
-
-const convertCurrency = async (currency) => {
-  targetCurrency.value = currency;
-  try {
-    const response = await fetch(
-      `https://api.exchangerate-api.com/v4/latest/${baseCurrency.value}`
-    );
-    const data = await response.json();
-    const rate = data.rates[targetCurrency.value];
-    display.value = (parseFloat(display.value) * rate).toFixed(2);
-  } catch (e) {
-    display.value = "Error";
-  }
-};
-</script>
-
 <style scoped>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #f7f7f7;
-}
-
 .calculator {
   width: 100%;
   position: relative;
@@ -125,7 +114,7 @@ body {
   gap: 1px;
 }
 
-button {
+.btn-currency, .btn-function, .btn-number, .btn-operator, .btn-equal {
   font-size: 1.5em;
   padding: 20px;
   border: none;

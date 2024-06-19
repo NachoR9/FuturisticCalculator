@@ -32,31 +32,32 @@ import { ref } from 'vue';
 </script>
 
 <template>
-    <div class="about">
-      <h1>Weather</h1>
+    <div class="weather">
       <label>Select a city
         <select @change="updateWeather" value="33044">
           <option v-for="city in cities" :value="city.id">{{ city.name }}</option>
         </select>
       </label>
       <div class="weather-card">
-        <div>{{ weatherInfo.temperature }}ºC {{ weatherInfo.city }} Sol</div>
-        <span>Cielo {{ weatherInfo.stateSky }}</span>
+        <div>{{ weatherInfo?.temperature }}ºC {{ weatherInfo?.city }} Sol</div>
+        <span>Cielo {{ weatherInfo?.stateSky }}</span>
       </div>
     </div>
   </template>
   
   <style>
-  @media (min-width: 1024px) {
-    .about {
-      min-height: 100vh;
+    .weather {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+      padding-left: 20px;
+      padding-right: 20px;
+      gap: 8px;
     }
 
     .weather-card {
       display: flex;
+      width: 100%;
       flex-direction: column;
       border: 1px solid black;
       border-radius: 25px;
@@ -65,6 +66,5 @@ import { ref } from 'vue';
       background-color: rgb(0,191,255);
       
     }
-  }
   </style>
   
