@@ -98,6 +98,7 @@ const convertCurrency = async (currency) => {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin: 10px;
+  margin-left: 8.5%;
 }
 
 .display {
@@ -114,7 +115,11 @@ const convertCurrency = async (currency) => {
   gap: 1px;
 }
 
-.btn-currency, .btn-function, .btn-number, .btn-operator, .btn-equal {
+.btn-currency,
+.btn-function,
+.btn-number,
+.btn-operator,
+.btn-equal {
   font-size: 1.5em;
   padding: 20px;
   border: none;
