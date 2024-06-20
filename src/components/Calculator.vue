@@ -88,7 +88,7 @@ const convertCurrency = async (currency) => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .calculator {
   width: 100%;
   position: relative;

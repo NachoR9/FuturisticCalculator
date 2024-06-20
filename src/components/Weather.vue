@@ -74,7 +74,7 @@ getCities();
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .sunny {
   background: url("https://fotografias.lasexta.com/clipping/cmsimages02/2022/04/29/77BCFF9C-7D8B-474B-A45F-E951270DE9E5/buena-temperatura-sol_98.jpg?crop=2121,1193,x0,y62&width=1900&height=1069&optimize=high&format=webply")
     no-repeat center center;
