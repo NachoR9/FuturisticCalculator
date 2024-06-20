@@ -82,25 +82,25 @@ getCities();
 }
 
 .rainy {
-  background: url("https://fotografias.lasexta.com/clipping/cmsimages02/2022/04/29/77BCFF9C-7D8B-474B-A45F-E951270DE9E5/buena-temperatura-sol_98.jpg?crop=2121,1193,x0,y62&width=1900&height=1069&optimize=high&format=webply")
+  background: url("https://i.pinimg.com/736x/37/5e/6e/375e6e01c814dd075c8466313b40d79d.jpg")
     no-repeat center center;
   background-size: cover;
 }
 
 .cloudy {
-  background: url("https://fotografias.lasexta.com/clipping/cmsimages02/2022/04/29/77BCFF9C-7D8B-474B-A45F-E951270DE9E5/buena-temperatura-sol_98.jpg?crop=2121,1193,x0,y62&width=1900&height=1069&optimize=high&format=webply")
+  background: url("https://i.pinimg.com/originals/6f/4e/87/6f4e87c57bad8495f4dd2ae9d5e24277.jpg")
     no-repeat center center;
   background-size: cover;
 }
 
 .kinda-cloudy {
-  background: url("https://fotografias.lasexta.com/clipping/cmsimages02/2022/04/29/77BCFF9C-7D8B-474B-A45F-E951270DE9E5/buena-temperatura-sol_98.jpg?crop=2121,1193,x0,y62&width=1900&height=1069&optimize=high&format=webply")
+  background: url("https://i.pinimg.com/originals/6f/4e/87/6f4e87c57bad8495f4dd2ae9d5e24277.jpg")
     no-repeat center center;
   background-size: cover;
 }
 
 .storm {
-  background: url("https://fotografias.lasexta.com/clipping/cmsimages02/2022/04/29/77BCFF9C-7D8B-474B-A45F-E951270DE9E5/buena-temperatura-sol_98.jpg?crop=2121,1193,x0,y62&width=1900&height=1069&optimize=high&format=webply")
+  background: url("https://t4.ftcdn.net/jpg/04/15/75/37/360_F_415753793_Amq32dxFXnCvub1rJ3UbCYjyzV7CdAce.jpg")
     no-repeat center center;
   background-size: cover;
 }
