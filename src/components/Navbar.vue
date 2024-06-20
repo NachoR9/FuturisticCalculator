@@ -8,6 +8,10 @@
 
 <style scoped>
 header {
+  width: 100%;
   background-color: black;
+  text-align: center;
+  color: white;
+  
 }
 </style>

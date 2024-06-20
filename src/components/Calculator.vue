@@ -43,6 +43,7 @@ const convertCurrency = async (currency) => {
 </script>
 
 <template>
+  <div class="container-calculator">
   <div class="calculator">
     <div class="display">
       {{ display }}
@@ -86,9 +87,15 @@ const convertCurrency = async (currency) => {
       </button>
     </div>
   </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
+.container-calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .calculator {
   width: 100%;
   position: relative;
@@ -97,8 +104,7 @@ const convertCurrency = async (currency) => {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 10px;
-  margin-left: 8.5%;
+  margin-top: 10px;
 }
 
 .display {

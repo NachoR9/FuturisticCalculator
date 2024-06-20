@@ -108,7 +108,7 @@ getCities();
 .weather {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 25px;
@@ -121,6 +121,7 @@ getCities();
 
 .weather-box {
   background-color: rgb(255, 255, 255);
+
 }
 
 .weather-card {
