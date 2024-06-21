@@ -36,12 +36,16 @@ function updateWeatherClass(stateSky) {
     weatherClass.value = "rainy";
   } else if (stateSky.includes("tormenta")) {
     weatherClass.value = "storm";
+  } else if (stateSky.includes("cubierto")) {
+    weatherClass.value = "covered";
+  } else if (stateSky.includes("niebla")) {
+    weatherClass.value = "fog";
   } else if (stateSky.includes("poco nuboso")) {
     weatherClass.value = "kinda-cloudy";
   } else if (stateSky.includes("nuboso")) {
     weatherClass.value = "cloudy";
   } else {
-    weatherClass.value = ""; 
+    weatherClass.value = "";
   }
 }
 
@@ -93,7 +97,19 @@ getCities();
   background-size: cover;
 }
 
+.covered {
+  background: url("https://i.pinimg.com/originals/6f/4e/87/6f4e87c57bad8495f4dd2ae9d5e24277.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+
 .kinda-cloudy {
+  background: url("https://i.pinimg.com/originals/6f/4e/87/6f4e87c57bad8495f4dd2ae9d5e24277.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+
+.fog {
   background: url("https://i.pinimg.com/originals/6f/4e/87/6f4e87c57bad8495f4dd2ae9d5e24277.jpg")
     no-repeat center center;
   background-size: cover;
@@ -121,7 +137,6 @@ getCities();
 
 .weather-box {
   background-color: rgb(255, 255, 255);
-
 }
 
 .weather-card {
