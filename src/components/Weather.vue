@@ -41,7 +41,7 @@ function updateWeatherClass(stateSky) {
   } else if (stateSky.includes("nuboso")) {
     weatherClass.value = "cloudy";
   } else {
-    weatherClass.value = ""; // Default class or no class
+    weatherClass.value = ""; 
   }
 }
 
